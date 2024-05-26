@@ -1,4 +1,6 @@
+import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
+import Stars from "@/components/Stars";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -7,7 +9,7 @@ export default function Home() {
     <section className="h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl-pb-24">
-          <div className="text-center xl:text-left">
+          <div className="text-center xl:text-left flex-shrink-0 order-2 xl:order-none">
             <span>Software Developer</span>
             <h1 className="h1 mb-6">
               Hello I&apos;m <br />
@@ -36,9 +38,12 @@ export default function Home() {
             </div>
           </div>
           {/* photo */}
-          <div>Image</div>
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+            <Photo />
+          </div>
         </div>
       </div>
+      <Stars />
     </section>
   );
 }
